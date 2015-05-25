@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block soustitre %} SIGN UP {% endblock %}
+{% block contenu %}
+
+	<form class="form-horizontal" action="/labo_python/sign_up_done" method="post">
+		{% if messageToRender %}
+			<p>il y a un problème avec le formulaire</p>
+		{% endif %}
+		<div class="form-group">
+			<label for="prenom">Prénom: </label>
+			<input type="text" class="form-control" id="prenom" placeholder="Prenom" name="prenom">
+		</div>
+		<div class="form-group">
+			<label for="nom">Nom</label>
+			<input type="text" class="form-control" id="nom" placeholder="Nom" name="nom">
+		</div>
+		<div class="form-group">
+			<label for="ddn">Date de naissance: </label>
+			<input type="date" class="form-control" id="ddn" placeholder="ddn" name="ddn">
+		</div>
+		<div class="form-group">
+			<label for="sexe">Sexe: </label>
+			<br>
+			<input type="radio" id="sexe" name="sexe" checked value="M"> Homme
+			<br>
+			<input type="radio"id="sexe" name="sexe" value="F"> Femme
+		</div>
+		<div class="form-group">
+			<label for="adresse">Adresse: </label>
+			<input type="text" class="form-control" id="adresse" placeholder="adresse" name="adresse">
+		</div>
+		<div class="form-group">
+			<label for="cp">Code Postal: </label>
+			<input type="text" class="form-control" id="cp" placeholder="cp" name="cp">
+		</div>
+		<div class="form-group">
+			<label for="loc">Localité: </label>
+			<input type="text" class="form-control" id="loc" placeholder="Localité" name="loc">
+		</div>
+		<div class="form-group">
+			<label for="pays">Pays: </label>
+			<input type="text" class="form-control" id="pays" placeholder="Pays" name="pays">
+		</div>
+		<div class="form-group">
+			<label for="email">Email: </label>
+			<input type="text" class="form-control" id="email" placeholder="Email" name="email">
+		</div>
+		<div class="form-group">
+			<label for="tel">Téléphone: </label>
+			<input type="text" class="form-control" id="tel" placeholder="Téléphone" name="tel">
+		</div>
+		<div class="form-group">
+			<label for="fax">Fax: </label>
+			<input type="text" class="form-control" id="fax" placeholder="Fax" name="fax">
+		</div>
+		<div class="form-group">
+			<label for="gsm">GSM: </label>
+			<input type="text" class="form-control" id="gsm" placeholder="GSM" name="gsm">
+		</div>
+		<div class="form-group">
+			<label for="login">Nom d'utilisateur: </label>
+			<input type="text" class="form-control" id="login" placeholder="Nom d'utilisateur" name="login">
+		</div>
+		<div class="form-group">
+			<label for="pwd">Mot de passe: </label>
+			<input type="password" class="form-control" id="pwd" placeholder="password" name="password">
+		</div>		
+		<input type="submit" value="login">
+
+	</form>
+{% endblock %}

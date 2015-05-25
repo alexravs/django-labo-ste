@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block soustitre %} Bienvenue {% endblock %}
+{% block contenu %}
+
+		
+		<p>Bonjour, que souhaitez-vous faire?<p>
+		<a href="/labo_python/login"><button type="button" class="btn btn-default navbar-btn " data-toggle="modal" data-target="#myModal">Se connecter</button></a>
+        <a href="/labo_python/sign_up"><button type="button" class="btn btn-default navbar-btn">S'enregistrer</button></a>
+        
+        {{ candidat.prenom }}
+		
+{% endblock %}

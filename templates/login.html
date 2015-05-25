@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block soustitre %} LOGIN {% endblock %}
+{% block contenu %}
+
+	<form class="form-horizontal" action="/labo_python/sign_in_done" method="post">
+		<div class="form-group">
+			<label for="login">Nom d'utilisateur: </label>
+			<input type="text" class="form-control" id="login" placeholder="username" name="username">
+		</div>
+		<div class="form-group">
+			<label for="pwd">Mot de passe: </label>
+			<input type="password" class="form-control" id="pwd" placeholder="password" name="password">
+		</div>
+		<input type="submit" value="login">
+	</form>
+{% endblock %}
